@@ -1,14 +1,16 @@
-
 import { GoogleGenAI } from "@google/genai";
 import { GameState, Player, RoleType, Language } from "../types";
 import { ROLES, TEXT } from "../constants";
 
 const getAI = () => {
+  // process.env.API_KEY is replaced by Vite at build time
   const apiKey = process.env.API_KEY;
+  
   if (!apiKey) {
-    console.warn("API_KEY not found in environment variables");
+    console.warn("API_KEY not found. AI features will be disabled.");
     return null;
   }
+  
   try {
     return new GoogleGenAI({ apiKey });
   } catch (e) {
@@ -25,7 +27,6 @@ export const generateBotChatter = async (
   if (!ai) return "...";
 
   const lang = gameState.language;
-  const roleName = ROLES[speakingBot.role].type; 
   const isWolf = ROLES[speakingBot.role].team === 'WEREWOLVES';
   const aliveCount = gameState.players.filter(p => p.isAlive).length;
   

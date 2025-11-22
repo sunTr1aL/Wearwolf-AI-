@@ -6,7 +6,9 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     define: {
-      // Polyfill process.env.API_KEY for the client-side Gemini service
+      // Prevents "process is not defined" error in some libraries
+      'process.env': {},
+      // Inject API Key specifically
       'process.env.API_KEY': JSON.stringify(env.API_KEY),
     },
     server: {

@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Werewolf AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Polyfill process for browser compatibility with Node-based libs
+      window.process = {
+        env: {
+          NODE_ENV: 'development'
+        }
+      };
+    </script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Crimson+Text:ital,wght@0,600;1,600&display=swap');
       body {
@@ -30,7 +38,7 @@
         background: #64748b; 
       }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
