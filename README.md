@@ -85,7 +85,7 @@ Open your browser to `http://localhost:1234`.
 
 ## How to Play
 
-### Hosting a Local Game (Multiplayer)
+### Hosting a Local Game (LAN / Same Wi-Fi)
 
 1.  Ensure the **Server** is running.
 2.  Open the **Client** in your browser.
@@ -97,12 +97,28 @@ Open your browser to `http://localhost:1234`.
 8.  Adjust role counts using the controls at the bottom.
 9.  Click **Start Game**.
 
+### Hosting an Internet Game (Tunneling)
+To play with friends who are **not** on the same Wi-Fi network (remote play), you must use a tunnel service like **ngrok**.
+
+1.  **Start the Server**: Run `npm run server`.
+2.  **Start the Tunnel**:
+    *   Download and install [ngrok](https://ngrok.com).
+    *   Open a terminal and run: `ngrok http 3000`.
+    *   Copy the **Forwarding URL** (e.g., `https://abcd-1234.ngrok-free.app`).
+3.  **Connect**:
+    *   Open the game in the browser.
+    *   Click **Advanced: Server Connection** on the home screen.
+    *   Paste the ngrok URL into the field.
+    *   **IMPORTANT**: Every player (Host and Guests) must paste this URL to connect to the same server.
+4.  **Play**: Create a room and share the ID normally.
+
 ### Joining a Game
 
 1.  Select **Multiplayer**.
-2.  Enter your **Nickname**.
-3.  Enter the **Room ID** provided by the host.
-4.  Click **Join Room**.
+2.  (If playing over internet) Expand **Advanced: Server Connection** and paste the Host's ngrok URL.
+3.  Enter your **Nickname**.
+4.  Enter the **Room ID** provided by the host.
+5.  Click **Join Room**.
 
 ### Single Player
 
