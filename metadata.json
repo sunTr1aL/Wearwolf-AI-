@@ -1,0 +1,7 @@
+{
+  "name": "Werewolf AI (狼人杀)",
+  "description": "A single-player social deduction game where you play against AI bots. Features Day/Night cycles, voting, role abilities, and AI-powered chat/logic.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
