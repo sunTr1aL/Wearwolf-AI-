@@ -32,15 +32,7 @@ A modern, web-based implementation of the classic social deduction game **Werewo
 ## Installation
 
 1.  **Clone the repository** (or download the source files).
-2.  **Delete package-lock.json** (Recommended to avoid version conflicts with the new AI SDK):
-    ```bash
-    # Windows PowerShell
-    rm package-lock.json
-    
-    # Mac/Linux
-    rm package-lock.json
-    ```
-3.  **Install dependencies**:
+2.  **Install dependencies**:
     ```bash
     npm install
     ```
@@ -73,13 +65,6 @@ npm run dev
 ```
 
 Open your browser to `http://localhost:1234`.
-
-## Troubleshooting
-
-### npm error code ETARGET / No matching version found
-If you encounter an error like `No matching version found for @google/genai@^0.1.1`:
-1.  **Delete `package-lock.json`**.
-2.  Run `npm install` again.
 
 ## How to Play
 

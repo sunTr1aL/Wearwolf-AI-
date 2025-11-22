@@ -9,7 +9,7 @@
     "server": "tsx server.ts"
   },
   "dependencies": {
-    "@google/genai": "^0.2.1",
+    "@google/genai": "latest",
     "express": "^4.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
