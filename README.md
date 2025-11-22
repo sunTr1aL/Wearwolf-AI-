@@ -32,23 +32,28 @@ A modern, web-based implementation of the classic social deduction game **Werewo
 ## Installation
 
 1.  **Clone the repository** (or download the source files).
-2.  **Clear NPM Cache** (Recommended if you see version errors):
-    ```bash
-    npm cache clean --force
-    ```
-3.  **Install dependencies**:
+2.  **Install dependencies**:
     ```bash
     npm install
     ```
 
-## Troubleshooting
+### Troubleshooting Dependencies
+If you encounter `ETARGET` or `No matching version` errors during install:
 
-**Error: `No matching version found for @google/genai`**
-
-If you encounter this error, it means npm is trying to install an old version that no longer exists.
-1.  Run `npm cache clean --force`
-2.  Delete `package-lock.json` and `node_modules` (if they exist).
-3.  Run `npm install` again.
+1.  Delete the existing lock file and modules:
+    *   **Windows (PowerShell)**:
+        ```powershell
+        rm package-lock.json
+        rm -r node_modules
+        npm cache clean --force
+        npm install
+        ```
+    *   **Mac/Linux**:
+        ```bash
+        rm -rf package-lock.json node_modules
+        npm cache clean --force
+        npm install
+        ```
 
 ## Configuration
 
